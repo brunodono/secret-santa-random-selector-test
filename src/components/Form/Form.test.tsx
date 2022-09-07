@@ -1,7 +1,7 @@
 import { fireEvent, render, screen,act } from "@testing-library/react";
 import React from "react";
 import { RecoilRoot } from "recoil";
-import Form from "./Form";
+import Form from "./index";
 
 
 describe('functionality of the Form.tsx', () => {
