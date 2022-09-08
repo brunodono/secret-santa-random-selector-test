@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useAddParticipant } from "state/hooks/useAddParticipant";
 import { useErrorMessage } from "state/hooks/useErrorMessage";
+import styles from "./Form.module.scss";
 
 const Form = () => {
 
@@ -21,6 +22,7 @@ const Form = () => {
     
     return (
         <form onSubmit={addParticipant}>
+            <div className={styles.input_button}>
             <input 
             type="text" 
             placeholder="Enter the participants's names"
@@ -29,7 +31,8 @@ const Form = () => {
             ref={inputRef}
              />
             <button disabled={!name}>Add</button>
-            {errorMessage && <p role="alert">{errorMessage}</p>}
+            {errorMessage && <p role="alert" className={styles.error_message}>{errorMessage}</p>}
+            </div>
         </form>
     )
 }

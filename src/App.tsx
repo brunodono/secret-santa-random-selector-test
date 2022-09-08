@@ -1,5 +1,4 @@
-
-import Form from 'components/Form';
+import Settings from 'pages/Settings';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
@@ -8,7 +7,7 @@ const App = () => {
         <BrowserRouter>
             <RecoilRoot>
                 <Routes>
-                    <Route path='/' element={<Form />} />
+                    <Route path='/' element={<Settings />} />
                 </Routes>
             </RecoilRoot>
         </BrowserRouter>

@@ -18,8 +18,29 @@ html {
   border: 2px solid black;
 }
 
+section {
+  width: 100%;
+  text-align: center;
+  max-width: 900px;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 36px;
+  color: #d6001c;
+  -webkit-text-stroke: 0.5px black;
+}
+
+ul li {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 9px 0;
+ 
 }

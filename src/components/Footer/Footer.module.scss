@@ -1,0 +1,40 @@
+.footer_settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: 350px;
+    height: 80px;
+    background-color: #73c149;
+    color:#FFF ;
+    font-size: 20px;
+    box-shadow: 2px 2px 0px 1px #0000;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button:hover {
+    background-color: #5da635;
+}
+
+@media screen and (max-width: 800px) {
+    .footer_settings{
+        flex-direction: column;
+        img {
+            margin-top: 32px;
+        }
+    }
+    .button {
+        width: 220px;
+        margin: 32px 0;
+    }
+
+    
+}
