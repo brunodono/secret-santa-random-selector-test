@@ -2,26 +2,46 @@
 
 exports[`the settings page has to render correctly 1`] = `
 <div>
-  <form>
-    <input
-      placeholder="Enter the participants's names"
-      type="text"
-      value=""
-    />
-    <button
-      disabled=""
-    >
-      Add
-    </button>
-    
-  </form>
-  <ul />
-  <footer>
-    <button
-      disabled=""
-    >
-      Start Game
-    </button>
-  </footer>
+  <div
+    class="card"
+  >
+    <section>
+      <h2>
+        Let's get started!
+      </h2>
+      <form>
+        <div
+          class="input_button"
+        >
+          <input
+            placeholder="Enter the participants's names"
+            type="text"
+            value=""
+          />
+          <button
+            disabled=""
+          >
+            Add
+          </button>
+          
+        </div>
+      </form>
+      <ul />
+      <footer
+        class="footer_settings"
+      >
+        <button
+          class="button"
+          disabled=""
+        >
+          Start Game!
+        </button>
+        <img
+          alt="shopping bags"
+          src="assets/images/bags.png"
+        />
+      </footer>
+    </section>
+  </div>
 </div>
 `;

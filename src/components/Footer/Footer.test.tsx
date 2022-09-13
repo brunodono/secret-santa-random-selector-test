@@ -12,10 +12,17 @@ jest.mock("state/hooks/useParticipantsList", () => {
 });
 
 const mockBrowsing = jest.fn();
+const mockSelector = jest.fn();
 
 jest.mock('react-router-dom', () => {
     return {
         useNavigate: () => mockBrowsing
+    }
+});
+
+jest.mock('state/hooks/useSelector', () => {
+    return {
+        useSelector: () => mockSelector
     }
 });
 
@@ -51,7 +58,8 @@ describe('when there is enough participants', () => {
         fireEvent.click(button);
 
         expect(mockBrowsing).toHaveBeenCalledTimes(1);
-        expect(mockBrowsing).toHaveBeenCalledWith('/select')
+        expect(mockBrowsing).toHaveBeenCalledWith('/selector');
+        expect(mockSelector).toHaveBeenCalledTimes(1)
 
     })
 });

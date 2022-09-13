@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useParticipantsList } from "state/hooks/useParticipantsList";
+import { useSelector } from "state/hooks/useSelector";
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -8,8 +9,11 @@ const Footer = () => {
 
     const browseTo = useNavigate();
 
+    const select = useSelector();
+
     const start = () => {
-        browseTo('/select')
+        select();
+        browseTo('/selector')
     }
 
     return (
