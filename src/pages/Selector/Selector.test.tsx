@@ -38,7 +38,7 @@ describe('on the selector page', () => {
         </RecoilRoot>)
 
         const options = screen.queryAllByRole('option');
-        expect(options).toHaveLength(participants.length)
+        expect(options).toHaveLength(participants.length + 1) //+1 refers to the standard option"select your name"
 
     });
 

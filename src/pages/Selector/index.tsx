@@ -32,7 +32,9 @@ const Selector = () => {
                 id="currentParticipant" 
                 placeholder="Select your name"
                 value={currentParticipant}
-                onChange={event => setCurrentParticipant(event.target.value)}>
+                onChange={event => setCurrentParticipant(event.target.value)}
+                >
+                <option>Select your name</option>
                     {participants.map(participant => <option key={participant}>{participant}</option>)}
                 </select>
                 <p>Click Select button to see who is your Secret Santa!</p>
